@@ -28,6 +28,7 @@ export default function OptionList () {
 
 const styles = StyleSheet.create({
   container: {
+    flex: 1,
     marginTop: 10,
     backgroundColor: '#111',
     flexDirection: 'row',
@@ -35,6 +36,7 @@ const styles = StyleSheet.create({
     alignItems: 'stretch',
     flexWrap: 'wrap',
     borderTopEndRadius: 10,
-    borderTopStartRadius: 10
+    borderTopStartRadius: 10,
+    maxHeight: '50%'
   }
 })
