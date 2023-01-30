@@ -1,20 +1,30 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
+import GroupSelector from './src/components/GroupSelector'
+import { KatakanaProvider } from './src/providers/KatakanaProvider'
+import constants from 'expo-constants'
+import OptionList from './src/components/OptionList'
+import RandomKatakana from './src/components/RandomKatakana'
 
-export default function App() {
+export default function App () {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+    <KatakanaProvider>
+      <View style={styles.container}>
+        <GroupSelector />
+        <RandomKatakana />
+        <OptionList />
+        <StatusBar style='auto' />
+      </View>
+    </KatakanaProvider>
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+    backgroundColor: '#222',
+    flexDirection: 'column',
+    paddingTop: constants.statusBarHeight,
+    paddingHorizontal: 10
+  }
+})

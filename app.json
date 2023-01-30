@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "katakana-app-mobile",
-    "slug": "katakana-app-mobile",
+    "name": "katakana-app",
+    "slug": "katakana-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -28,6 +28,12 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "8f1e8853-09dd-475c-9284-de71491dddf5"
+      }
+    },
+    "owner": "devyan18"
   }
 }
